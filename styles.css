@@ -31,6 +31,7 @@ body {
 	background: url('https://source.unsplash.com/1600x900/?technology') no-repeat center center;
 	background-size: cover;
 	background-attachment: fixed;
+	
 }
   
 /* Lista de navegação (ul) com espaçamento entre os itens */
@@ -139,7 +140,7 @@ body {
 }
   
 /* Imagem dentro do card do curso */
-.course img {
+.cursos-section img, .cursos-section2 img {
 	width: 100%;
 	height: 150px;
 	border-radius: 8px;
@@ -149,8 +150,11 @@ body {
 }
   
 /* Título do curso */
-.course h3 {
+.cursos-section h3, .cursos-section2 h3 {
 	margin: 10px 0;
+	color: #070707;
+	font-weight: bold;
+	font-size: 19px;
 }
   
 /* Estilo para curso selecionado */
@@ -377,4 +381,38 @@ body {
 .top1 p , .top2 p , .top3 p {
 	font-size: 25px;
 }
+
+.cursos-section {
+	background-image: url("imagens/TiC.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 60px 20px;
+	text-align: center;
+	color: #fff;
+	position: relative;
+	z-index: 1;
+}
+
+.cursos-section2 {
+	background-image: url("imagens/Adm.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 60px 20px;
+	text-align: center;
+	color: #fff;
+	position: relative;
+	z-index: 1;
+}
+
+.cursos-section::before, .cursos-section2::before {
+	content: "";
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5); /* sombra escura */
+	z-index: -1;
+  }
 

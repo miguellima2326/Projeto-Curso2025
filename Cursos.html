@@ -10,6 +10,7 @@
   
 </head>
 <body>
+  
   <header class="header">
     <nav class="navbar">
       <ul>
@@ -21,10 +22,11 @@
       </ul>
     </nav>
   </header>
-  
+
+<section class="cursos-section">
   <h1 class="titulo">Nossos Cursos de  Tecnologia</h1>
   <div class="carousel-container">
-      <div class="carousel" id="carousel">
+      <div class="carousel" data-area="Tecnologia">
           <div class="course" id="curso1" onclick="selectCourse(this)">
               <img src="imagens/html.png" alt="Html">
               <h3>Curso de Html</h3>
@@ -46,16 +48,62 @@
             <h3>Curso de Cibersegurança</h3>
         </div>
         <div class="course" onclick="selectCourse(this)">
+          <img src="imagens/IA.jpg" alt="Ia">
+          <h3>Curso de IA</h3>
+        </div>
+         <div class="course" onclick="selectCourse(this)">
+        <img src="imagens/rede.webp" alt="Rede">
+        <h3>Rede de Computadores</h3>
+        </div>
+        <div class="course" onclick="selectCourse(this)">
+          <img src="imagens/ti.png" alt="Ti">
+          <h3>Fundamentos de T.i</h3>
+        </div>
+        <div class="course" onclick="selectCourse(this)">
+        <img src="imagens/realidade.jpg" alt="Realidade Aumentada">
+        <h3>Realidade Aumentada</h3>
+        </div>
+          
+      </div>
+         
+  </div>
+  <p id="course-counter" style="text-align:center; color:white; font-size:20px; margin-bottom: 20px;">
+    Carregando cursos...
+  </p>
+  
+</section>
+
+<section class="cursos-section2">
+  <h1 class="titulo">Cursos de Administração</h1>
+  <div class="carousel-container">
+      <div class="carousel" data-area="Administração">
+          <div class="course" id="curso1" onclick="selectCourse(this)">
+              <img src="imagens/html.png" alt="Html">
+              <h3>Curso de Html</h3>
+          </div>
+          <div class="course" onclick="selectCourse(this)">
+              <img src="imagens/javascript.png" alt="JavaScript">
+              <h3>Curso de JavaScript</h3>
+          </div>
+          <div class="course" onclick="selectCourse(this)">
+              <img src="imagens/css.png" alt="Css">
+              <h3>Curso de Css</h3>
+          </div>
+          <div class="course" onclick="selectCourse(this)">
+              <img src="imagens/Csharp.png" alt="C#">
+              <h3>Curso de C#</h3>
+          </div>
+          <div class="course" onclick="selectCourse(this)">
+            <img src="imagens/cyber.jpg" alt="Cyber">
+            <h3>Curso de Cibersegurança</h3>
+        </div>
+        <div class="course" onclick="selectCourse(this)">
           <img src="imagens/IA.jpg" alt="C#">
           <h3>Curso de IA</h3>
         </div>
          <div class="course" onclick="selectCourse(this)">
         <img src="imagens/rede.webp" alt="C#">
         <h3>Rede de Computadores</h3>
-        </div>
-        <div class="course" onclick="selectCourse(this)">
-          <img src="imagens/ti.png" alt="JavaScript">
-          <h3>Fundamentos de T.i</h3>
         </div>
         <div class="course" onclick="selectCourse(this)">
         <img src="imagens/realidade.jpg" alt="JavaScript">
@@ -68,6 +116,7 @@
   <p id="course-counter" style="text-align:center; color:white; font-size:20px; margin-bottom: 20px;">
     Carregando cursos...
   </p>
+</section>
 
 <script src="script.js"></script>
 <div id="perfil-sidebar" class="perfil-sidebar">
