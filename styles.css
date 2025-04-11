@@ -1,0 +1,380 @@
+/* Reset de margens e bordas padrão, e define o box-sizing */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+  
+/* Estilização geral do corpo da página */
+body {
+	font-family: Arial, sans-serif;
+	background-color: #757575;
+	padding-top: 70px; /* Espaço para o header fixo */
+	overflow-x: hidden;
+}
+  
+/* Cabeçalho fixo no topo da página */
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #333;
+	z-index: 10;
+}
+  
+/* Barra de navegação com imagem de fundo */
+.navbar {
+	display: flex;
+	justify-content: center;
+	padding: 20px 0;
+	background: url('https://source.unsplash.com/1600x900/?technology') no-repeat center center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+  
+/* Lista de navegação (ul) com espaçamento entre os itens */
+.navbar ul {
+	list-style: none;
+	display: flex;
+	gap: 250px;
+}
+  
+/* Itens da lista (li) dentro da navbar */
+.navbar li {
+	font-size: 27px;
+	display: flex;
+	align-items: grid;
+	margin-right: 120px;
+}
+
+/* Links do menu de navegação */
+.navbar a {
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	transition: color 0.3s;
+}
+  
+/* Efeito de hover nos links da navbar */
+.navbar a:hover {
+	color: #3498db;
+	transition: ease, 0.3s;
+}
+  
+/* Container do carrossel (scroll horizontal de cards) */
+.carousel-container {
+	width: auto;
+	overflow: visible;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 80px;
+	overflow-x: auto;
+	transition: transform 0.3s ease;
+}
+
+/* Efeito de escala ao passar o mouse sobre um card */
+.course:hover {
+	transform: scale(1.1);
+	z-index: 10;
+}
+  
+/* Faixa de rolagem horizontal com os cards */
+.carousel {
+	display: flex;
+	gap: 40px;
+	overflow-x: scroll;
+	scroll-behavior: smooth;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+	max-width: 100%;
+	white-space: nowrap;
+	cursor: grab;
+	user-select: none;
+	padding: 20px 10px;
+}
+
+/* Cursor quando o carrossel está sendo arrastado */
+.carousel.active {
+	cursor: grabbing;
+}
+  
+/* Oculta a barra de rolagem no Webkit (Chrome, Safari) */
+.carousel::-webkit-scrollbar {
+	display: none;
+}
+  
+.carousel::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+  
+.carousel::-webkit-scrollbar-thumb {
+	background: #3498db;
+	border-radius: 4px;
+}
+  
+.carousel::-webkit-scrollbar-thumb:hover {
+	background: #2980b9;
+}
+  
+/* Estilo dos cards de curso */
+.course {
+	display: inline-block;
+	min-width: 250px;
+	background: white;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	transition: transform 0.3s, border 0.3s;
+	padding: 10px;
+	text-align: center;
+	transform-origin: center center;
+	position: relative;
+	z-index: 1;
+	-webkit-user-drag: none;
+	user-select: none;
+	overflow: visible;
+}
+  
+/* Imagem dentro do card do curso */
+.course img {
+	width: 100%;
+	height: 150px;
+	border-radius: 8px;
+	user-select: none;
+	-webkit-user-drag: none;
+	pointer-events: none;
+}
+  
+/* Título do curso */
+.course h3 {
+	margin: 10px 0;
+}
+  
+/* Estilo para curso selecionado */
+.selected {
+	border: 3px solid blue;
+	transform: scale(1.1);
+}
+  
+/* Seções principais do site */
+.about, .mission, .courses, .testimonials {
+	padding: 80px 20px;
+}
+  
+/* Título principal das seções */
+.titulo {
+	padding-top: 40px;
+	text-align: center;
+	font-weight: bold;
+	color: #ffffff;
+	font-size: 50px;
+}
+  
+/* Contador de cursos no canto direito */
+.course-counter {
+	color: rgb(255, 255, 255);
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+/* Sidebar de perfil (menu lateral oculto) */
+.perfil-sidebar {
+	position: fixed;
+	top: 0;
+	right: -300px;
+	width: 300px;
+	height: 100%;
+	background-color: #797777;
+	box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+	z-index: 999;
+	transition: right 0.3s ease;
+	padding: 20px;
+	overflow-y: auto;
+}
+
+/* Classe ativada para mostrar a sidebar */
+.perfil-sidebar.show {
+	right: 0;
+}
+  
+/* Cabeçalho da sidebar */
+.perfil-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #ffffff;
+	padding-bottom: 10px;
+}
+  
+/* Botão de fechar a sidebar */
+.fechar-btn {
+	background: transparent;
+	border: none;
+	font-size: 20px;
+	cursor: pointer;
+}
+  
+/* Lista de opções no perfil */
+.perfil-opcoes {
+	list-style: none;
+	padding: 0;
+	margin-top: 20px;
+}
+  
+.perfil-opcoes li {
+	margin: 10px 0;
+}
+  
+.perfil-opcoes a {
+	text-decoration: none;
+	color: #333;
+	font-weight: bold;
+	transition: color 0.2s;
+}
+
+.perfil-opcoes a:hover {
+	color: #176294;
+}
+
+/* Rodapé fixo do site */
+.site-footer {
+	background-color: #1a1a1a;
+	color: white;
+	text-align: center;
+	padding: 10px 8px;
+	position: static;
+	bottom: 0;
+	width: 100%;
+	z-index: 999;
+	box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.4);
+}
+  
+.footer-content {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+  
+.footer-content p {
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+  
+.social-icons {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+  
+.social-icons a {
+	color: #ffffff;
+	font-size: 20px;
+	transition: color 0.3s ease;
+}
+  
+.social-icons a:hover {
+	color: #3498db;
+}
+
+.background-1, .background-2 {
+	position: relative;
+	text-align: center;
+	color: white;
+}
+
+.texto-img {
+	position: absolute;
+	top: 9%;
+	left: 50%;
+	transform:  translate(-50%, -50%);
+	padding: 20px;
+	background: rgba(0, 0, 0, 0.4);
+	border-radius: 10px;
+}
+
+.texto-img h1, .texto-img h2 {
+	font-size: 40px;
+	
+}
+
+.texto-img p {
+	font-size: 30px;
+}
+
+.Subtexto-img {
+	position: absolute;
+	top: 30%;
+	left: 34%;
+	transform: translate(-50%, -50%);
+	padding: 20px;
+	background: rgba(0, 0, 0, 0.4);
+	border-radius: 10px;
+}
+
+.Subtexto-img h1 {
+	font-size: 40px;
+}
+
+.Subtexto-img p {
+	font-size: 25px;
+}
+
+.Subtexto2-img {
+	position: absolute;
+	top: 56%;
+	left: 60%;
+	transform: translate(-10%, -30%);
+	padding: 20px;
+	background: rgba(0, 0, 0, 0.4);
+	border-radius: 10px;
+}
+
+.Subtexto2-img h1 {
+	font-size: 40px;
+}
+
+.Subtexto2-img p {
+	font-size: 25px;
+}
+
+.top1 {
+	position: absolute;
+	top: 25%;
+	left: 60%;
+	transform: translate(-10%, -30%);
+	padding: 20px;
+	background: rgba(0, 0, 0, 0.4);
+	border-radius: 10px;
+}
+
+.top2 {
+	position: absolute;
+	top: 41%;
+	left: 40%;
+	transform: translate(-61%, -30%);
+	padding: 20px;
+	background: rgba(0, 0, 0, 0.4);
+	border-radius: 10px;
+}
+
+.top3 {
+	position: absolute;
+	top: 57%;
+	left: 60%;
+	transform: translate(-10%, -30%);
+	padding: 20px;
+	background: rgba(0, 0, 0, 0.4);
+	border-radius: 10px;
+}
+
+.top1 h1 , .top2 h1 , .top3 h1 {
+	font-size: 40px;
+}
+
+.top1 p , .top2 p , .top3 p {
+	font-size: 25px;
+}
+

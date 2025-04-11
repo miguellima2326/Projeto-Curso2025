@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M Cursos</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html"><span class="material-icons">home</span>Home</a></li>
+        <li><a href="Sobre Nós.html"><span class="material-icons">business</span>Sobre Nós</a></li>
+        <li><a href="Contato.html"><span class="material-icons">phone</span>Contato</a></li>
+        <li><a href="#" onclick="mostrarPerfil(event)"><span class="material-icons">person</span>Meu Perfil</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+  
+  <h1 class="titulo">Nossos Cursos de  Tecnologia</h1>
+  <div class="carousel-container">
+      <div class="carousel" id="carousel">
+          <div class="course" id="curso1" onclick="selectCourse(this)">
+              <img src="imagens/html.png" alt="Html">
+              <h3>Curso de Html</h3>
+          </div>
+          <div class="course" onclick="selectCourse(this)">
+              <img src="imagens/javascript.png" alt="JavaScript">
+              <h3>Curso de JavaScript</h3>
+          </div>
+          <div class="course" onclick="selectCourse(this)">
+              <img src="imagens/css.png" alt="Css">
+              <h3>Curso de Css</h3>
+          </div>
+          <div class="course" onclick="selectCourse(this)">
+              <img src="imagens/Csharp.png" alt="C#">
+              <h3>Curso de C#</h3>
+          </div>
+          <div class="course" onclick="selectCourse(this)">
+            <img src="imagens/cyber.jpg" alt="C#">
+            <h3>Curso de Cibersegurança</h3>
+        </div>
+        <div class="course" onclick="selectCourse(this)">
+          <img src="imagens/IA.jpg" alt="C#">
+          <h3>Curso de IA</h3>
+        </div>
+         <div class="course" onclick="selectCourse(this)">
+        <img src="imagens/rede.webp" alt="C#">
+        <h3>Rede de Computadores</h3>
+        </div>
+        <div class="course" onclick="selectCourse(this)">
+          <img src="imagens/ti.png" alt="JavaScript">
+          <h3>Fundamentos de T.i</h3>
+        </div>
+        <div class="course" onclick="selectCourse(this)">
+        <img src="imagens/realidade.jpg" alt="JavaScript">
+        <h3>Realidade Aumentada</h3>
+        </div>
+          
+      </div>
+         
+  </div>
+  <p id="course-counter" style="text-align:center; color:white; font-size:20px; margin-bottom: 20px;">
+    Carregando cursos...
+  </p>
+
+<script src="script.js"></script>
+<div id="perfil-sidebar" class="perfil-sidebar">
+  <div class="perfil-header">
+    <h3>Meu Perfil</h3>
+    <button onclick="fecharPerfil()" class="fechar-btn">✖</button>
+  </div>
+  <ul class="perfil-opcoes">
+    <li><a href="#">Minhas Informações</a></li>
+    <li><a href="#">Alterar Senha</a></li>
+    <li><a href="#">Histórico de Cursos</a></li>
+  </ul>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2025 M Cursos. Todos os direitos reservados.</p>
+    <div class="social-icons">
+      <a href="#"><i class="material-icons">facebook</i></a>
+      <a href="#"><i class="material-icons">email</i></a>
+      <a href="#"><i class="material-icons">smartphone</i></a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

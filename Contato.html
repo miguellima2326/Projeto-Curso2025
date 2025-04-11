@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M Cursos</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html"><span class="material-icons">home</span>Home</a></li>
+        <li><a href="Cursos.html"><span class="material-icons">book</span>Cursos</a></li>
+        <li><a href="Sobre Nós.html"><span class="material-icons">business</span>Sobre Nós</a></li>
+        <li><a href="#" onclick="mostrarPerfil(event)"><span class="material-icons">person</span>Meu Perfil</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+
+
+  <script src="script.js"></script>
+  <div id="perfil-sidebar" class="perfil-sidebar">
+    <div class="perfil-header">
+      <h3>Meu Perfil</h3>
+      <button onclick="fecharPerfil()" class="fechar-btn">✖</button>
+    </div>
+    <ul class="perfil-opcoes">
+      <li><a href="#">Minhas Informações</a></li>
+      <li><a href="#">Alterar Senha</a></li>
+      <li><a href="#">Histórico de Cursos</a></li>
+    </ul>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 M Cursos. Todos os direitos reservados.</p>
+      <div class="social-icons">
+        <a href="#"><i class="material-icons">facebook</i></a>
+        <a href="#"><i class="material-icons">email</i></a>
+        <a href="#"><i class="material-icons">smartphone</i></a>
+      </div>
+    </div>
+  </footer>
+  
+</body>
+</html>
