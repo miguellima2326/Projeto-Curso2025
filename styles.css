@@ -1,10 +1,16 @@
-/* Reset de margens e bordas padrão, e define o box-sizing */
+/* Reset de margens e bordas padrão */
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	/*Select do Site */
+	-webkit-user-select: none;  /* Safari */
+    -moz-user-select: none;     /* Firefox */
+    -ms-user-select: none;      /* Internet Explorer*/
+    user-select: none;          /* Padrão  */
+
 }
-  
+
 /* Estilização geral do corpo da página */
 body {
 	font-family: Arial, sans-serif;
@@ -22,8 +28,27 @@ body {
 	background: #333;
 	z-index: 10;
 }
+
+/*Logo Navbar */
+.logo {
+	display: grid;
+	justify-items: left;
+	position: fixed;
+	left: 5%;
+	top: 0.5%;
+	
+}
+
+.logo span {
+	font-weight: bold;
+	color: white;
+}
+
+.logo img {
+	height: 40px;
+}
   
-/* Barra de navegação com imagem de fundo */
+/* Barra de navegação */
 .navbar {
 	display: flex;
 	justify-content: center;
@@ -34,11 +59,13 @@ body {
 	
 }
   
-/* Lista de navegação (ul) com espaçamento entre os itens */
+/* Lista de navegação */
 .navbar ul {
+	text-align: right;
 	list-style: none;
 	display: flex;
-	gap: 250px;
+	gap: 130px;
+
 }
   
 /* Itens da lista (li) dentro da navbar */
@@ -46,10 +73,9 @@ body {
 	font-size: 27px;
 	display: flex;
 	align-items: grid;
-	margin-right: 120px;
 }
 
-/* Links do menu de navegação */
+/* Texto do menu de navegação */
 .navbar a {
 	text-decoration: none;
 	color: white;
@@ -294,8 +320,8 @@ body {
 	top: 9%;
 	left: 50%;
 	transform:  translate(-50%, -50%);
-	padding: 20px;
-	background: rgba(0, 0, 0, 0.4);
+	padding: 35px;
+	background: rgba(0, 0, 0, 0.8);
 	border-radius: 10px;
 }
 
@@ -314,7 +340,7 @@ body {
 	left: 34%;
 	transform: translate(-50%, -50%);
 	padding: 20px;
-	background: rgba(0, 0, 0, 0.4);
+	background: rgba(0, 0, 0, 0.8);
 	border-radius: 10px;
 }
 
@@ -328,11 +354,11 @@ body {
 
 .Subtexto2-img {
 	position: absolute;
-	top: 56%;
-	left: 60%;
-	transform: translate(-10%, -30%);
+	top: 55%;
+	left: 40%;
+	transform: translate(-2.5%, -30%);
 	padding: 20px;
-	background: rgba(0, 0, 0, 0.4);
+	background: rgba(0, 0, 0, 0.7);
 	border-radius: 10px;
 }
 
@@ -348,9 +374,9 @@ body {
 	position: absolute;
 	top: 25%;
 	left: 60%;
-	transform: translate(-10%, -30%);
+	transform: translate(-4%, -30%);
 	padding: 20px;
-	background: rgba(0, 0, 0, 0.4);
+	background: rgba(0, 0, 0, 0.7);
 	border-radius: 10px;
 }
 
@@ -358,9 +384,9 @@ body {
 	position: absolute;
 	top: 41%;
 	left: 40%;
-	transform: translate(-61%, -30%);
+	transform: translate(-65%, -30%);
 	padding: 20px;
-	background: rgba(0, 0, 0, 0.4);
+	background: rgba(0, 0, 0, 0.7);
 	border-radius: 10px;
 }
 
@@ -368,9 +394,9 @@ body {
 	position: absolute;
 	top: 57%;
 	left: 60%;
-	transform: translate(-10%, -30%);
+	transform: translate(-4%, -30%);
 	padding: 20px;
-	background: rgba(0, 0, 0, 0.4);
+	background: rgba(0, 0, 0, 0.7);
 	border-radius: 10px;
 }
 
@@ -415,4 +441,84 @@ body {
 	background: rgba(0, 0, 0, 0.5); /* sombra escura */
 	z-index: -1;
   }
+
+.texto-img:hover {
+	transform:translate(-50%, -50%) scale(1.21);
+  }
+
+.Subtexto-img:hover {
+	transform:translate(-42%, -50%) scale(1.18);
+  }
+
+.Subtexto2-img:hover, .top1:hover {
+	transform: translate(-10%, -30%) scale(1.18);
+}
+
+.top2:hover {
+	transform: translate(-57%, -30%) scale(1.18);
+}
+
+.top3:hover {
+	transform: translate(-10%, -30%) scale(1.18);
+}
+
+.hover:hover, .site-footer:hover, .header li:hover,.logo:hover {
+	transform: scale(1.18);
+}
+
+ .texto-img, .Subtexto-img, .Subtexto2-img, .top1, .top2, .top3, .hover, .site-footer, .header li, .logo {
+	transition: all 0.3s ease;
+	transform-origin: center;
+  }
+
+
+
+/*Scroll Bar web-kit */
+
+/* Estilo para o trilho da barra de rolagem */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); /* Sombras internas */
+    border-radius: 5px;
+    background-color: #ffffff; /* Cor de fundo do trilho */
+}
+
+/* Estilo para a própria barra de rolagem */
+::-webkit-scrollbar {
+    width: 2px; /* Largura da barra */
+    background-color: #ffffff; /* Cor de fundo da barra */
+}
+
+/* Estilo para o polegar (a parte que é arrastada) */
+::-webkit-scrollbar-thumb {
+    border-radius: 5px; /* Bordas arredondadas */
+    -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); /* Sombras internas */
+    background-color: #D6E3FF; /* Cor do polegar */
+}
+
+/* Teste Responsividade */
+
+@media (max-width: 768px) {
+	.texto-img, .Subtexto-img, .Subtexto2-img,
+	.top1, .top2, .top3 {
+	  position: relative;
+	  top: auto;
+	  left: auto;
+	  transform: none;
+	  padding: 15px;
+	  margin: 20px auto;
+	  width: 90%;
+	  text-align: center;
+	}
+  
+	.texto-img h1, .Subtexto-img h1, .Subtexto2-img h1,
+	.top1 h1, .top2 h1, .top3 h1 {
+	  font-size: 26px;
+	}
+  
+	.texto-img p, .Subtexto-img p, .Subtexto2-img p,
+	.top1 p, .top2 p, .top3 p {
+	  font-size: 18px;
+	}
+  }
+  
 
